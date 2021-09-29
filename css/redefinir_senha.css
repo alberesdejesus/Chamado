@@ -1,0 +1,36 @@
+body {
+	background-color: lightcyan;
+	font-family: arial;
+	color: black;
+}
+input, select, textarea {
+	background-color: #F0F8FF;
+	color: black;
+	border: solid 1px black;
+	margin: 5px;
+	padding: 5px;
+}
+#bt1 {
+	width: 20%;
+	height: 40px;
+	background-color: #4682B4;
+	color: white;
+	border: solid 2px white;
+	border-radius: 5px;
+}
+.janela{
+	width:70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: #B0C4DE;
+	border: solid 1px black;
+	padding: 5px;
+	box-shadow: 2px 2px;
+}
+
+label {
+	width: 200px;
+	text-align: right;
+	vertical-align: top;
+	display: inline-table;
+}

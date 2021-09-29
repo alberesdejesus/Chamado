@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Novo Chamado</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/chamado.css" />
+		<script src="js/tentativa de mostrar chamados.js"></script> <!-- Alterar nome do arquivo JS e lembrar de alterar aqui!!!!!!!!! -->
+		
+	</head>
+	<body onload="carregarTotalEstoque('totalEstoque')">
+	<div class="Chamados">
+        <p> Lista de Chamados Abertos: <span id="listaChamados">0</span></p>
+    </div>
+	
+	<form>
+		<table>
+			<h2> Novo Chamado </h2><br/>
+			Por gentileza, preencha os dados e em breve entraremos em contato para tratativa.
+			<form id="enviar">
+				<tr><!-- Nome -->
+				<td class="nome">Nome: </td>
+				<td><input type="text" id="nome" size="50" maxlength="50" placeholder="Digite seu nome " required pattern="[A-z]{6,50}" /></td>
+				</tr>
+				
+				<tr><!-- E-mail -->
+				<td class="email">E-mail: </td>
+				<td><input type="email" id="email" size="60" maxlength="60" placeholder="Digite seu email " required /></td>
+				</tr>
+		
+				<tr>
+				<td class="tipoProblema">Tipo de problema:</td>
+				<td>
+				<select id="tipos">
+                        <option value="1">Hardware</option>
+                        <option value="2">Software</option>
+                        <option value="3">Operações</option>
+				</select>
+				</td>
+				</tr>
+		
+				<tr>
+				<td class="gravidadeProblema">Informe a gravidade do problema:</td>
+				<td>
+				<select id="gravidade">
+					<option value="4">Baixo</option>
+					<option value="3">Medio</option>
+					<option value="2">Alto</option>
+					<option value="1">Critico</option>
+				</select>
+				</td>
+				</tr>
+				
+				<tr>
+				<td>
+				Técnico Responsavel:
+				<td id="responsavel">
+				<input type="checkbox" id="P4" value="1" />Paulo
+				<input type="checkbox" id="P5" value="2" />Fernanda
+				<input type="checkbox" id="P6" value="3" />Darcy
+				</td>
+				</tr>
+				
+				<tr>
+				<td class="selecionarSede">Selecione a sede:</td>
+				<td>
+				<select id="sede">
+					<option>São Paulo</option>
+					<option>Curitiba</option>
+					<option>Rio de Janeiro</option>
+					<option>Ceará</option>
+				</select>
+				</td>
+				</tr>
+				
+				<tr>
+				<td>
+				Descreva o problema:<br/><br/>
+				<textarea id="mensagem" rows="5" 
+				cols="40" required placeholder="Digite algumas informações do chamado"pattern="[A-z,0-9]{10,1000}"></textarea><br/><br/><br/>
+				</td>
+				</tr>
+				
+				<tr>
+				<td colspan="2" align="center">
+				<!-- <button type="button" onclick="validacao();">Enviar</button><br/><br/> -->
+				<input type="button" value="Salvar" class="alinhaBtns" onclick="validacao('nome','email','tipos','gravidade','responsavel','mensagem')">
+                <input type="button" value="Lista de Chamados" class="alinhaBtns" onclick="window.open('verChamados.html','_self')">
+                <input type="reset" value="Limpar" class="alinhaBtns">
+                </td>
+				</tr>
+			</form>
+		</table>
+	</body>
+</html>
+
+<!--
+<script lang="javascript">
+function validacao(){
+	if(nome.value.length <3){
+		alert("Campo nome invalido.");
+		nome.focus();
+		return false;
+	}
+	if(email.value.length<6 || 
+		email.value.indexOf("@")<=0 ||
+		email.value.lastIndexOf(".")<=email.value.indexOf("@") ||
+		(email.value.lastIndexOf(".")+1)==
+		email.value.lenght){
+		alert("Campo email invalido.");
+		email.focus();
+		return false;
+	}
+	if(senha.value.length < 7 ||
+		senha.value.length > 20){
+		alert("Sua senha precisa ter entre 6 e 20 digitos.");
+		return false;
+	}
+	if(P1.checked==false &&
+		P2.checked==false &&
+		P3.checked==false){
+		alert("Escolha um tipo de problema.");
+		return false;
+	}
+	if(P4.checked==false &&
+		P5.checked==false &&
+		P6.checked==false){
+		alert("Selecione um tecnico para atende-lo");
+		return false;
+	}
+	if(msg.value==""){
+		alert("Você não digitou nada no campo DETALHES.\nPor favor, descreva o(s) problema(s) encontrado(s) de forma detalhada".);
+		return false;
+	}
+	alert("Enviando dados... Aguarde");
+	frm1.submit();
+}
+</script>
+-->
