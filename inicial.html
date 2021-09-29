@@ -38,7 +38,7 @@
 					Não tem uma conta?
 				</span>
 
-				<a class="txt2" href="./pages/cadastro.html#paralogin" target="_blank"> <!-- Na # coloca o link para direcionar a outra pagina -->
+				<a class="txt2" href="./pages/cadastro.html#paralogin"> <!-- Na # coloca o link para direcionar a outra pagina -->
 					Inscrever-se
 				</a>
 		</div><br/>
@@ -47,10 +47,11 @@
 	</body>
 </html>
 
-<script type="text/javascript" src="js/data.js"></script> 
+<script src="js/data.js"></script> 
 <script lang="javascript">
+	var sensor = require('./js/data.js')
 	function verificarLogin(){
-		if(email.value == data) {
+		if(data.includes(txtEmail)) {
 			alert("Informe um email correto!");
 			txtEmail.focus();
 			return false;
@@ -66,6 +67,6 @@
 		// 	txtConfirmarSenha.focus();
 		// 	return false;
 		// }
-		alert("Tudo esta correto!");
+		alert(window.data["admin@admin.com"]);
 	}
 	</script>
