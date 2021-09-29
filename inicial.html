@@ -7,52 +7,55 @@
 </head>
 
 <body>
+	<Div class="janela1">
+		<form class="janela">
+			<h1 id=mensagemtela>
+				<center>Seja Bem-Vindo(a)!</center>
+			</h1><br /><br />
 
-	<form class="janela">
-		<h1 id=mensagemtela>
-			<center>Seja Bem-Vindo(a)!</center>
-		</h1><br /><br />
+			<label>Tipo de acesso:</label>
+			<form>
+				<input type="radio" id="P1" name="opção" value="1">Cliente
+				<!--Colocar somente 1 opção-->
+				<input type="radio" id="P2" name="opção" value="2">Analista
+			</form>
+			<br><br>
 
-		<label>Tipo de acesso:</label>
-		<form>
-			<input type="radio" id="P1" name="opção" value="1">Cliente <!--Colocar somente 1 opção-->
-			<input type="radio" id="P2" name="opção" value="2">Analista
+			<label id="input1">Email:</label>
+			<input type="email" id="txtEmail" maxlength="60" placeholder="digite seu email" required /><br />
+			<label id="input1">Senha:</label>
+			<input type="password" id="txtSenha" maxlength="20" placeholder="digite sua senha" pattern="[A-z,0-9]{8,20}"
+				required /><br /><br />
+
+			<div class="text-center p-t-115">
+				<span class="txt1">
+					Esqueceu a senha?
+				</span>
+
+				<a class="txt2" href="./pages/redefinir_senha.html">
+					<!-- Na # coloca o link para direcionar a outra pagina -->
+					Recuperar senha
+				</a>
+			</div><br />
+
+			<label></label><button id="bt1" onclick="verificarLogin();">
+				<center>Entrar</center>
+			</button><br /><br />
+
+			<div class="text-center p-t-115">
+				<span class="txt1">
+					Não tem uma conta?
+				</span>
+
+				<a class="txt2" href="./pages/cadastro.html#paralogin">
+					<!-- Na # coloca o link para direcionar a outra pagina -->
+					Inscrever-se
+				</a>
+			</div><br />
+
 		</form>
-		<br><br>
+	</Div>
 
-		<label id="labelnome">Email:</label>
-		<input type="email" id="txtEmail" size="60" maxlength="60" placeholder="digite seu email" required /><br />
-		<label id="labelsenha">Senha:</label>
-		<input type="password" id="txtSenha" size="30" maxlength="20" placeholder="digite sua senha"
-			pattern="[A-z,0-9]{8,20}" required /><br /><br />
-
-		<div class="text-center p-t-115">
-			<span class="txt1">
-				Esqueceu a senha?
-			</span>
-
-			<a class="txt2" href="./pages/redefinir_senha.html">
-				<!-- Na # coloca o link para direcionar a outra pagina -->
-				Recuperar senha
-			</a>
-		</div><br />
-
-		<label></label><button id="bt1" onclick="verificarLogin();">
-			<center>Entrar</center>
-		</button><br /><br />
-
-		<div class="text-center p-t-115">
-			<span class="txt1">
-				Não tem uma conta?
-			</span>
-
-			<a class="txt2" href="./pages/cadastro.html#paralogin">
-				<!-- Na # coloca o link para direcionar a outra pagina -->
-				Inscrever-se
-			</a>
-		</div><br />
-
-	</form>
 </body>
 
 </html>
