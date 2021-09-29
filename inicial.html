@@ -26,12 +26,12 @@
 					Esqueceu a senha?
 				</span>
 
-				<a class="txt2" href="./pages/redefinir_senha.html" target="_blank"> <!-- Na # coloca o link para direcionar a outra pagina -->
+				<a class="txt2" href="./pages/redefinir_senha.html"> <!-- Na # coloca o link para direcionar a outra pagina -->
 					Recuperar senha
 				</a>
 		</div><br/>
 		
-		<label></label><button id="bt1"><center>Entrar</center></button><br/><br/>
+		<label></label><button id="bt1" onclick="verificarLogin();"><center>Entrar</center></button><br/><br/>
 		
 		<div class="text-center p-t-115">
 				<span class="txt1">
@@ -46,3 +46,26 @@
 	</form>
 	</body>
 </html>
+
+<script type="text/javascript" src="js/data.js"></script> 
+<script lang="javascript">
+	function verificarLogin(){
+		if(email.value == data) {
+			alert("Informe um email correto!");
+			txtEmail.focus();
+			return false;
+		}
+		// if(txtSenha.value.length < 6 || txtSenha.value.length > 20){
+		// 	alert("Informe uma senha entre 6 a 20 caracteres!");
+		// 	txtSenha.focus();
+		// 	return false;
+		// }
+		// if(txtSenha.value != txtConfirmarSenha.value){
+		// 	alert("Senha e Confirmação de Senha não conferem!");
+		// 	txtConfirmarSenha.value = "";
+		// 	txtConfirmarSenha.focus();
+		// 	return false;
+		// }
+		alert("Tudo esta correto!");
+	}
+	</script>
